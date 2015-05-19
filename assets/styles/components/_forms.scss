@@ -1,0 +1,22 @@
+#signup-form {
+   position: relative;
+   width: 100%;
+   margin-top: 60px;
+   
+   input {
+      height: 40px;
+      width: 60%;
+   }
+   button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      margin-left: -4px;
+   }
+
+   &:after {
+      content: '';
+      width: 100%;
+      height: 0;
+      clear: both;
+   }
+}

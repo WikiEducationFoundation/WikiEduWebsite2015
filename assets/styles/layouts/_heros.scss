@@ -1,0 +1,30 @@
+.hero {
+   display: block;
+   position: relative;
+   width: 100%;
+   height: auto; 
+   background: whitesmoke;
+   z-index: 1;
+   max-height: 500px;
+   background-size: cover;
+   overflow: hidden;
+   
+   &:after {
+      content: '';
+      width: 100%;
+      display: block;
+      padding-top: 50%;
+   }
+}
+
+.hero-page-header {
+   display: block;
+   width: 100%;
+   text-align: center;
+   color: white;
+   position: absolute;
+   bottom: 100%;
+   left: 0;
+   z-index: 15;
+   margin-bottom: 25%;
+}

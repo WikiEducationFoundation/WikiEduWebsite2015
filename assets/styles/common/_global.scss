@@ -1,0 +1,62 @@
+@import url("http://fonts.googleapis.com/css?family=Cardo:400,400italic,700");
+
+body {
+   font-family: $font-family-serif;
+   padding-bottom: 100px;
+}
+
+p {
+   font-size: 19px;
+   margin-bottom: 20px;
+   line-height: 30px;
+   &.small {
+      font-size: 15px;
+      line-height: 24px;
+   }
+
+   &:last-child {
+      margin-bottom: 0;
+   }
+}
+h1,h2,h3,h4 {
+   margin-top: 30px;
+   margin-bottom: 15px;
+}
+h1 {
+   font-size: 48px;
+}
+h2 {
+   font-size: 36px;
+   line-height: 43px;
+}
+h3 {
+   font-size: 26px;
+}
+h4 {
+   font-size: 18px;
+}
+
+a {
+   .content & , .footer-column & {
+      color: rgba(150,150,150,1.0);
+      text-decoration: underline;
+   }
+}
+
+blockquote {
+   padding: 0;
+   border: none;
+   margin: 0 0 20px 0;
+   text-align: center;
+   p {
+      font-size: 26px;
+      line-height: 40px;
+      font-style: italic;
+   }
+
+   @include respond-min($screen-sm) {
+      margin: 30px -40px 30px -40px;
+   }
+   
+}
+
