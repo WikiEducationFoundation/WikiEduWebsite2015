@@ -15,14 +15,16 @@ body > header {
    }
 
    .brand {
-      content: '';
       display: block;
       width: 60px;
       height: 60px;
       position: static;
       float: left;
-      background: blue;
+      background: transparent url(../images/logo.png) no-repeat center;
+      background-size: 100% auto;
       cursor: pointer;
+      overflow: hidden;
+      text-indent: -9999px;
    }
 
 

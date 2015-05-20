@@ -1,4 +1,4 @@
-<div class="col-sm-4 entry entry--preview">
+<div class="col-sm-8 col-md-4 entry entry--preview">
    <article <?php post_class(); ?>>
       <figure></figure>
      <header>

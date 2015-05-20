@@ -1,9 +1,8 @@
 <article <?php post_class(); ?>>
   <header>
-    <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <?php if (get_post_type() === 'post') { get_template_part('templates/entry-meta'); } ?>
+   <?php if (get_post_type() === 'post') { ?>
+      <h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+      <p class="entry-date"><?php if (get_post_type() === 'post') { the_date(); } ?></p>
+   <?php } ?>
   </header>
-  <div class="entry-summary">
-    <?php the_excerpt(); ?>
-  </div>
 </article>

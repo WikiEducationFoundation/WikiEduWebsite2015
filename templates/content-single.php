@@ -1,5 +1,6 @@
 <div class="row">
   <div class="col-sm-6 col-sm-push-1">
+
   <?php while (have_posts()) : the_post(); ?>
     <article <?php post_class(); ?>>
       <header style="display:none;">
@@ -15,5 +16,6 @@
       <?php comments_template('/templates/comments.php'); ?>
     </article>
   <?php endwhile; ?>
+  
   </div>
 </div>
