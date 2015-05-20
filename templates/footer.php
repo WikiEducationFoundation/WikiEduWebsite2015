@@ -1,3 +1,4 @@
+<?php get_template_part('templates/contact-form'); ?>
 <footer class="content-info" role="contentinfo">
   <div class="container">
     <?php dynamic_sidebar('sidebar-footer'); ?>

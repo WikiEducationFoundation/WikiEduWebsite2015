@@ -37,6 +37,10 @@
 
 .bio.staff {
   @extend .row;
+  
+  &:first-child {
+    margin-top: 0;
+  }
   .bio-content {
     @extend .col-sm-5;
   }
