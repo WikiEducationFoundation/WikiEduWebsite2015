@@ -12,6 +12,10 @@ $grid-gutter-width:         40px;
 // Colors
 $brand-primary:         #000000;
 
+// Large screen / wide desktop
+$container-large-desktop:      (940px + $grid-gutter-width);
+
+
 
 
 $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;

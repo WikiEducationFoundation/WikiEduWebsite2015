@@ -1,16 +1,23 @@
 .entry {
    &--preview {
+      height: 100%;
       margin-bottom: 30px;
       figure {
          width: 100%;
          height: 280px;
-         background: black;
+         background: black no-repeat center;
+         background-size: cover;
+         img {
+            width: 100%;
+            height: auto;
+         }
       }
       .entry-title {
          color: black;
-         white-space: nowrap;
+         line-height: 40px;
          a {
             color: black;
+            line-height: 40px;
          }
       }
       .entry-summary, .entry-meta {

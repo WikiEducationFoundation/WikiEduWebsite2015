@@ -1,7 +1,7 @@
 <!-- <time class="updated" datetime="<?= get_the_time('c'); ?>"><?= get_the_date(); ?></time> -->
 <?php
 $categories = get_the_category();
-$separator = ' ';
+$separator = ', ';
 $output = '';
 if($categories){
    foreach($categories as $category) {

@@ -1,4 +1,4 @@
-<div class="contact-form">
+<div class="contact-form" style="display:none;">
   <div class="container">
     <div class="row">
       <div class="col-sm-4 col-sm-push-2">

@@ -1,12 +1,13 @@
 .recent-posts {
    background: black;
    color: white;
-   padding: 30px 0 40px;
+   padding: 50px 0;
+   
    h2 {
       color: #DDD;
       width: 100%;
       text-align: center;
-      margin: 10px 0 auto;
+      margin: 0 auto;
    }
 
    .recent-post {
@@ -26,8 +27,8 @@
 
 .toc-block {
    @extend .row;
-   padding: 40px 0;
-   margin: 40px 0;
+   padding: 50px 0;
+   margin: 0 0 50px 0;
    border: 1px solid #939393;
    border-left: none;
    border-right: none;
@@ -45,16 +46,26 @@
          display: block;
          font-size: 19px;
          line-height: 30px;
-         
+         margin-bottom: 5px;
          a {
             font-weight: inherit;
          }
+         &:last-child {
+            margin-bottom: 0;
+         }
       }
+      
       &:first-of-type {
-         padding-left: 0;
+         @include respond-min($screen-sm) {
+            padding-left: 0;
+         }
+         
       }
       &:last-of-type {
-         padding-right: 0;
+         @include respond-min($screen-sm) {
+            padding-right: 0;
+         }
+         
       }
    }
 }

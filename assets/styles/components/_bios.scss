@@ -7,6 +7,11 @@
         width: 100%;
         height: auto;
       }
+      max-width: 50%;
+      margin: 0 auto;
+      @include respond-min($screen-sm) {
+        max-width: 100%;
+      }
     }
   }
   .bio-content {

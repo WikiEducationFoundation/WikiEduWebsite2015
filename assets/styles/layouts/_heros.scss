@@ -3,17 +3,17 @@
    position: relative;
    width: 100%;
    height: auto; 
-   background: #dbdbdb;
+   background-color: #dbdbdb;
    z-index: 1;
-   max-height: 500px;
-   background-size: cover;
+   max-height: 600px;
+   background-size: 100% auto;//cover;
    overflow: hidden;
    
    &:after {
       content: '';
       width: 100%;
       display: block;
-      padding-top: 50%;
+      padding-top: 35%;
    }
 
    body.search & {
@@ -32,6 +32,7 @@
    z-index: 15;
    margin-bottom:0;
    vertical-align: bottom; 
+   
    h1 {
       margin-bottom: 0;
    }
@@ -42,5 +43,22 @@
       h1 {
          line-height: 1;
       }
+   }
+
+   body.single & {
+      bottom: calc(100% + 60px);
+      margin: 0 auto;
+   }
+
+   body.home & {
+      bottom: calc(100% + 190px);
+      h1 {
+         max-width: 500px;
+         margin-left: auto;
+         margin-right: auto;
+         line-height: 68px;
+
+      }
+      
    }
 }
