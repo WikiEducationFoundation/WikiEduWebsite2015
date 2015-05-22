@@ -2,10 +2,11 @@
 <div class="blog-header">
    <div class="row">
       <div class="col-md-5 blog-header__categories">
-         <ul class="list-unstyled blog-header-nav">
+<!--          <ul class="list-unstyled blog-header-nav">
             <li class="active"><a href="#">All</a></li>
             <li><a href="#">Roundups</a></li>
-         </ul>
+         </ul> -->
+         <?php wp_nav_menu( array( 'theme_location' => 'featured_categories' , 'menu_class' => 'list-unstyled blog-header-nav') ); ?>
       </div>
       <div class="col-md-3 blog-header__search">
          <?php get_search_form(); ?>

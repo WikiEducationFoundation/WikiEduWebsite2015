@@ -14,9 +14,10 @@
       display: block;
       text-decoration: none;
       &__title {
-         color: #DDD;
+         color: white;
          text-decoration: none;
          margin-bottom: 0;
+         line-height: 1.54;
       }
       &__author {
          color: rgba(150,150,150,1);

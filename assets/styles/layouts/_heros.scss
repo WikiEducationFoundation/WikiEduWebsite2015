@@ -1,40 +1,185 @@
 .hero {
+   transition: all 0.15s linear;
    display: block;
    position: relative;
    width: 100%;
    height: auto; 
-   background-color: #dbdbdb;
+   background-color: black;
    z-index: 1;
-   max-height: 600px;
-   background-size: 100% auto;//cover;
+   max-height: 650px;
+   background-size: 100% auto;
+   background-position: 50% 0%;
    overflow: hidden;
+
    
    &:after {
       content: '';
       width: 100%;
       display: block;
-      padding-top: 35%;
+      padding-top: 50%;
+   }
+
+   img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      vertical-align: top;
+      width: 100%;
+      height: auto; 
+      visibility: hidden;
    }
 
    body.search & {
       display: none;
    }
+
+   .hero-gradient {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      vertical-align: bottom;
+      background: transparent url(../images/hero-gradient.png) no-repeat center bottom;
+      background-size: 100% auto;
+   }
 }
 
-.hero-page-header {
+.hero {
+   position: relative;
+   .hero-slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      
+      .slick-list, .slick-track {
+         height: 100%;
+      }
+      
+      .hero-slide {
+         img {
+            width: 100%;
+            height: auto;
+         }
+      }
+   }
+}
+
+.hero-content {
+   width: 100%;
+   text-align: center;
+   h1 {
+      color: white;
+   }
+}
+
+.hero-inner {
    display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   padding-top: 65px;
+
+   .hero-inner-content {
+      display: table;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      &__cell {
+         display: table-cell;
+         width: 100%;
+         vertical-align: middle;
+         text-align: center;
+         body.single-post &{
+            vertical-align: bottom;
+            padding-bottom: 10px;
+            @include respond-min($screen-xs) {
+               padding-bottom: 20px;
+            }
+            @include respond-min($screen-sm) {
+               padding-bottom: 40px;
+            }
+         }
+         
+      }
+      body.home &{
+         max-width: 500px;
+         margin: 0 auto;
+      }
+      h1 {
+         margin-bottom: 0; 
+         text-align: center;
+         color: white;
+      }
+
+      p {
+         color: white;
+         font-weight:normal;
+         font-size: 15px;
+         margin-top: 0;
+         a {
+            color: white;
+         }
+
+         @include respond-min($screen-lg) {
+            font-size: 19px;
+         }
+      }
+      h1, p {
+         padding: 0 15px;
+      }
+   }
+   
+}
+
+.hero-page-header{
+   display: none;
    width: 100%;
    text-align: center;
    color: white;
    position: absolute;
-   bottom: calc(100% + 215px);
+   bottom: 100%;
    left: 0;
    z-index: 15;
-   margin-bottom:0;
-   vertical-align: bottom; 
+   margin-bottom: 80px;
+   
+   body.search-results &, body.search-no-results & {
+      display:block;
+   }
+   
+   @include respond-min($screen-xs) {
+      margin-bottom: 120px;
+   }
+
+   @include respond-min($screen-sm) {
+      margin-bottom: 180px;
+   }
+
+   @include respond-min($screen-lg) {
+      margin-bottom: 200px;
+   }
    
    h1 {
       margin-bottom: 0;
+   }
+
+   p {
+      color: white;
+      font-weight:normal;
+      font-size: 15px;
+      margin-top: 10px;
+      a {
+         color: white;
+      }
+
+      @include respond-min($screen-lg) {
+         font-size: 19px;
+      }
    }
    
    body.search & {
@@ -46,12 +191,18 @@
    }
 
    body.single & {
-      bottom: calc(100% + 60px);
       margin: 0 auto;
+      padding-bottom: 15px;
+      @include respond-min($screen-sm) {
+         padding-bottom: 30px;
+      }
+      @include respond-min($screen-md) {
+         padding-bottom: 45px;
+      }
+      
    }
 
    body.home & {
-      bottom: calc(100% + 190px);
       h1 {
          max-width: 500px;
          margin-left: auto;
@@ -59,6 +210,5 @@
          line-height: 68px;
 
       }
-      
    }
 }

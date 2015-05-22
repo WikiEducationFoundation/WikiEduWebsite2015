@@ -12,6 +12,13 @@
     "slick.js": "~1.5.5"
   },
   "overrides": {
+    "slick.js": {
+      "main": [
+        "./slick/slick.scss",
+        "./slick/slick-theme.scss",
+        "./slick/slick.js"
+      ]
+    },
     "modernizr": {
       "main": "./modernizr.js"
     },

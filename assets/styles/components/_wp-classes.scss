@@ -40,3 +40,25 @@
   @extend .sr-only;
   @extend .sr-only-focusable;
 }
+
+.comments {
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+    code {
+      color: #939393;
+    }
+  }
+}
+
+.nav-links {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  font-size: 19px;
+  vertical-align: middle;
+  border: 1px solid #939393;
+  border-left: none;
+  border-right: none;  
+  margin: 0 0 40px;
+}

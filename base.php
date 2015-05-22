@@ -17,7 +17,18 @@ use Roots\Sage\Wrapper;
     <?php
       do_action('get_header');
       get_template_part('templates/header');
-      get_template_part('templates/hero');
+      if(is_single()) {
+         get_template_part('templates/hero', 'post');
+      }
+      else if (is_home()) {
+        get_template_part('templates/hero', 'blog');
+      }
+      else if (is_search()) {
+      }
+      else{
+         get_template_part('templates/hero');
+      }
+     
     ?>
 
     <div class="wrap container" role="document">
@@ -25,8 +36,15 @@ use Roots\Sage\Wrapper;
         <?php include Wrapper\template_path(); ?>
       </div><!-- /.content -->
     </div><!-- /.wrap -->
-    
-    <?php get_template_part('templates/recent'); ?>
+    <?php 
+      if(is_single()){
+        get_template_part('templates/post', 'related');
+      }
+      else {
+        get_template_part('templates/recent');
+      }
+    ?>
+
 
     <?php
       do_action('get_footer');
