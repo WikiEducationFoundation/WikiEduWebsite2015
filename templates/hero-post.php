@@ -6,13 +6,20 @@
 ?>
 <div class="hero" style="background-image:url(<?= $thumb_url ?>);background-position: 50% 0%;">
   <div class="hero-gradient"></div>
+  <div class="hero-gradient hero-gradient--white"></div>
   <div class="hero-inner">
     <div class="hero-inner-content">
       <div class="hero-inner-content__cell">
-        <h1><?= the_title(); ?></h1>
-        <?php if(is_single()) { ?>
-        <p>By <a href="<?= get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author" class="fn"><?= get_the_author(); ?></a> on <?= the_date(); ?></p>
-        <?php  } ?>
+        <div class="container">
+          <div class="row">
+          <div class="col-sm-6 col-sm-push-1">
+            <h1><?= the_title(); ?></h1>
+            <?php if(is_single()) { ?>
+            <p>By <a href="<?= get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author" class="fn"><?= get_the_author(); ?></a> on <?= get_the_date(); ?></p>
+            <?php  } ?>
+            </div>
+          </div>
+        </div>
       </div>
     
     </div>

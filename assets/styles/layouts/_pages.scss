@@ -1,18 +1,25 @@
 .page-content {
    position: relative;
-   padding-top: 60px;
-   padding-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
    
    body.blog & {
-      padding-top: 45px;
+      padding-top: 30px;
       padding-bottom: 0;
+      @include respond-min($screen-sm) {
+        padding-top: 40px;
+        padding-bottom: 0;
+      }
    }
 }
 
 .page.home {
    .page-content {
       h2:first-of-type {
-         margin: 0 auto 60px;
+        margin: 0 auto 30px;
+        @include respond-min($screen-sm) {
+          margin: 0 auto 40px;
+        }
       }
    }
 }
@@ -45,21 +52,24 @@ body.for-instructors {
     position: relative;
     margin-bottom: 50px;
     & > a, .anchor-link {
-      display: inline-block;
+      display: block;
+      float: right;
       height: 40px;
       width: 40px;
       position: static;
       background: transparent url(../images/link.png) no-repeat;
-      background-position: 0 95%;
+      background-position: 0 50%;
       background-size: 26px auto;
       outline: 0;
       @include respond-min($screen-sm) {
         display: block; 
+        float: none;
         position: absolute;
-        top: -60px;
+        top: -50px;
         left: -40px;
         width: 40px;
         height: 80px;
+        background-position: 0 95%;
       }
     }
   }
@@ -95,12 +105,15 @@ body.for-instructors {
       }
       
       button {
-        float: right;
-        background: white;
-        color: black;
-        min-width: 160px;
-        height: 40px;
-        border: 2px solid black;
+        @include respond-min($screen-sm) {
+          float: right;
+          background: white;
+          color: black;
+          min-width: 160px;
+          height: 40px;
+          border: 2px solid black;
+        }
+        
       }
     }
   }

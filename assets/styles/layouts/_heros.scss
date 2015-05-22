@@ -10,13 +10,26 @@
    background-size: 100% auto;
    background-position: 50% 0%;
    overflow: hidden;
+   opacity: 0;
+   
+   & > img {
+      position: absolute;
+      visibility: hidden;
+   }
+   
+   &.active {
+      opacity: 1;
+   }
 
    
    &:after {
       content: '';
       width: 100%;
       display: block;
-      padding-top: 50%;
+      padding-top: 65%;
+      @include respond-min($screen-xs) {
+         padding-top: 50%;
+      }
    }
 
    img {
@@ -36,13 +49,24 @@
    .hero-gradient {
       display: block;
       position: absolute;
-      top: 0;
+      top: auto;
+      botthome: 0;
       left: 0;
       width: 100%;
       height: 100%;
       vertical-align: bottom;
-      background: transparent url(../images/hero-gradient.png) no-repeat center bottom;
+      background: rgba(0,0,0,0.0) url(../images/dark-gradient.png) no-repeat center bottom;
       background-size: 100% auto;
+      
+      &--white {
+         top: 0;
+         bottom: auto;
+         background: rgba(0,0,0,0.0) url(../images/gradient.png) no-repeat center top;
+         background-size: 100% auto;
+         body.home & {
+            background-color: rgba(0,0,0,0.35);
+         }
+      }
    }
 }
 
@@ -83,7 +107,11 @@
    left: 0;
    width: 100%;
    height: 100%;
-   padding-top: 65px;
+   
+   @include respond-min($screen-md) {
+      padding-top: 65px;
+   }
+   
 
    .hero-inner-content {
       display: table;
@@ -93,18 +121,25 @@
       &__cell {
          display: table-cell;
          width: 100%;
-         vertical-align: middle;
          text-align: center;
-         body.single-post &{
-            vertical-align: bottom;
-            padding-bottom: 10px;
-            @include respond-min($screen-xs) {
-               padding-bottom: 20px;
-            }
-            @include respond-min($screen-sm) {
-               padding-bottom: 40px;
-            }
+         vertical-align: bottom;
+         padding-bottom: 10px;
+         @include respond-min($screen-xs) {
+            padding-bottom: 20px;
          }
+
+         @include respond-min($screen-sm) {
+            vertical-align: bottom;
+            padding-bottom: 40px;
+         }
+
+         body.home &{
+            vertical-align: middle;
+            padding-top: 10px;
+            padding-bottom: 0; 
+       
+         }
+
          
       }
       body.home &{
@@ -184,6 +219,9 @@
    
    body.search & {
       color: black;
+      position: static;
+      bottom: auto;
+      left: auto;
 
       h1 {
          line-height: 1;

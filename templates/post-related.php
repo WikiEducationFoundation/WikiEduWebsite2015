@@ -16,7 +16,7 @@ if($categories){
    <div class="container">
       <div class="row">
          <div class="col-sm-6 col-sm-push-1">
-            <h2>Recent Posts</h2>
+            <h2>Related Posts</h2>
             <div class="row">
                <?php $count = 0; ?>
                <?php while ($related->have_posts()) : $related->the_post(); ?>

@@ -20,6 +20,32 @@
       init: function() {
         // JavaScript to be fired on all pages
         $('.hero-slider').slick();
+        var heros = document.querySelectorAll('.hero');
+        imagesLoaded( heros, function() {
+          $(this.elements[0]).addClass('active');
+        });
+        $('.search-form-container').on('click', function(){
+          $target = $(this);
+          if(!$target.hasClass('active')) {
+            $target.addClass('active');
+            setTimeout(function(){
+              $target.find('input').first().focus();
+            },200);
+      
+          }
+        });
+
+        $(window).on('resize', function(){
+          if(!$('.search-form--header input').is(':focus')){
+            $('.search-form-container').removeClass('active');
+          }
+        });
+        $(window).on('scroll', function(){
+          if(!$('.search-form--header input').is(':focus')){
+            $('.search-form-container').removeClass('active');
+          }
+        });
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -32,6 +58,23 @@
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
+
+      }
+    },
+    // Home page
+    'search': {
+      init: function() {
+
+        // JavaScript to be fired on the home page
+      },
+      finalize: function() {
+        // JavaScript to be fired on the home page, after the init JS
+        $target = $('.search-form-container');
+        
+        setTimeout(function(){
+          $target.addClass('active');
+        },500);
+        
       }
     },
     // About us page, note the change from about-us to about_us.

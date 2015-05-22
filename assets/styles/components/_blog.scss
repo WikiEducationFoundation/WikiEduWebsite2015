@@ -1,18 +1,29 @@
 .entry {
    &--preview {
       height: 100%;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
+      
+      @include respond-min($screen-sm) {
+         margin-bottom: 30px;
+      }
       figure {
          width: 100%;
-         height: 280px;
+         height: auto;
+         padding-bottom: 66.66%;
          background: black no-repeat center;
          background-size: cover;
          img {
             width: 100%;
             height: auto;
          }
+         @include respond-min($screen-sm) {
+            height: 280px;
+            padding-bottom: 0;
+         }
+
       }
       .entry-title {
+         @include smart-underline();
          color: black;
          line-height: 40px;
          a {
@@ -22,8 +33,12 @@
       }
       .entry-summary, .entry-meta {
          border-bottom: 2px solid #cbcbcb;
-         padding-bottom: 20px;
-         margin-bottom: 20px;
+         padding-bottom: 10px;
+         margin-bottom: 10px;
+         @include respond-min($screen-sm) {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+         }
       }
 
       .entry-meta {
@@ -52,6 +67,8 @@
    height: 80px;
    border-bottom: 1px solid #979797;
    
+   
+   
    &__search{
       form {
          width: 100%;
@@ -62,6 +79,10 @@
    }
    
    .blog-header-nav {
+      display: none;
+      @include respond-min($screen-md) {
+         display: block;
+      }
       li {
          display: inline-block;
          width: auto;
@@ -99,6 +120,17 @@
 
 
 body.single-post {
+   .entry-content {
+      img {
+         width: 100%;
+         height: auto;
+      }
+      h1,h2,h3,h4,h5 {
+         &:first-of-type {
+            margin-top: 0;
+         }
+      }
+   }
    .entry-meta {
       display: block;
       width: 100%;

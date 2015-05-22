@@ -19,6 +19,11 @@ function title() {
   } elseif (is_404()) {
     return __('Not Found', 'sage');
   } else {
-    return get_the_title();
+    $custom_title = get_post_meta( get_the_ID(), 'custom_hero_title', true );
+    if( ! empty( $custom_title ) ) {
+      return $custom_title;
+    }else {
+      return get_the_title();
+    }
   }
 }

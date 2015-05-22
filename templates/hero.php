@@ -5,7 +5,9 @@ if(has_post_thumbnail()) {
   } 
 ?>
 <div class="hero" style="background-image:url(<?= $featured_image; ?>);background-position: 50% 0%;">
+  <?= the_post_thumbnail(); ?>
   <div class="hero-gradient"></div>
+  <div class="hero-gradient hero-gradient--white"></div>
   <div class="hero-inner">
     <div class="hero-inner-content">
       <div class="hero-inner-content__cell">

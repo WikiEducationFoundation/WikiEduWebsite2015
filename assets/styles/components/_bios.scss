@@ -27,6 +27,10 @@
       color: rgba(147,147,147,1); 
     }
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .team-list {

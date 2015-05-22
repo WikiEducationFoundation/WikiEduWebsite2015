@@ -10,7 +10,10 @@ input {
 #signup-form {
    position: relative;
    width: 100%;
-   margin-top: 60px;
+
+   @include respond-min($screen-md) {
+      margin-top: 60px;
+   }
 
    input {
       height: 40px;

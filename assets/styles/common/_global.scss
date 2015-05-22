@@ -7,9 +7,15 @@ body {
 
 ul {
    li {
-      font-size: 19px;
-      line-height: 30px;
-      margin-bottom: 20px;
+      font-size: 16px;
+      margin-bottom: 1em;
+      line-height: 28px;
+      
+      @include respond-min($screen-sm) {
+         font-size: 19px;
+         margin-bottom: 20px;
+         line-height: 30px;
+      }
 
       &.small {
          font-size: 15px;
@@ -19,9 +25,15 @@ ul {
 }
 
 p, .p {
-   font-size: 19px;
-   margin-bottom: 20px;
-   line-height: 30px;
+   font-size: 16px;
+   margin-bottom: 1em;
+   line-height: 28px;
+   
+   @include respond-min($screen-sm) {
+      font-size: 19px;
+      margin-bottom: 20px;
+      line-height: 30px;
+   }
    &.small {
       font-size: 15px;
       line-height: 24px;
@@ -37,8 +49,13 @@ p, .p {
    }
 }
 h1,h2,h3,h4 {
-   margin-top: 30px;
+   margin-top: 15px;
    margin-bottom: 15px;
+   @include respond-min($screen-sm) {
+      margin-top: 30px;
+      margin-bottom: 15px;
+   }
+   
 }
 h1 {
    font-size: 26px;
@@ -51,13 +68,20 @@ h1 {
    }
 }
 h2 {
-   font-size: 36px;
+   font-size: 26px;
    line-height: 1.33;
+   @include respond-min($screen-xs) {
+      font-size: 36px;
+   }
 }
 h3 {
-   font-size: 26px;
-   line-height: 1.8;
+   font-size: 21px;
+   line-height: 1.2;
    margin-bottom: 10px;
+   @include respond-min($screen-xs) {
+      font-size: 26px;
+      line-height: 1.8;
+   }
 }
 h4 {
    font-size: 19px;
