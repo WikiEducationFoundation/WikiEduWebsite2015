@@ -1,4 +1,5 @@
-<div class="contact-form" style="display:none;">
+<?php if(!is_home() || !is_search()) { ?>
+<div class="contact-form">
   <div class="container">
     <div class="row">
       <div class="col-sm-4 col-sm-push-2">
@@ -23,6 +24,7 @@
     </div>
   </div>
 </div>
+<?php } ?>
 
 
 

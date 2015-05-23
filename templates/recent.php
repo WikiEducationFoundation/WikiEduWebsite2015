@@ -4,7 +4,7 @@ $args = array(
    'nopaging'            => true
 );
 $query = new WP_Query( $args ); ?>
-
+<?php if(is_home() || is_search()) { ?>
 <div class="recent-posts">
    <div class="container">
       <div class="row">
@@ -27,4 +27,5 @@ $query = new WP_Query( $args ); ?>
       </div>
    </div>
 </div>
+<?php } ?>
 

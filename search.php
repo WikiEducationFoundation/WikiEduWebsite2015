@@ -1,4 +1,4 @@
-<?php get_template_part('templates/page', 'header-search'); ?>
+<?php get_template_part('templates/header', 'search-page'); ?>
 
 <div class="page-content row">
    <div class="col-sm-6 col-sm-push-1">

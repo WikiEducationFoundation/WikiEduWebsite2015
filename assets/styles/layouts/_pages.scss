@@ -25,14 +25,24 @@
 }
 
 body.search {
+
+  .search-results {
+    article {
+      margin-bottom: 30px;
+    }
+  }
   
   .content {
-    margin-top: 50%;
+    padding-top: 80px;
+    @include respond-min($screen-sm) {
+      padding-top: 160px;
+    }
+    @include respond-min($screen-sm) {
+      padding-top: 220px;
+    }
   }
   &.search-no-results {
-    .content {
-      margin-top: 60%;
-    }
+    
   }
   .hero-page-header {
     span.results {
