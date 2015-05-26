@@ -92,12 +92,15 @@ body.for-instructors {
       @extend .p;
       display: block;
       width: 100%;
-      height: 80px;
+      height:auto;
       padding: 20px 0;
       margin: 0;
       border-bottom: 1px solid rgba(147,147,147,1);
       line-height: 40px;
       vertical-align: middle;
+      @include respond-min($screen-sm) {
+        height: 80px;
+      }
       &:first-child {
         border-top: 1px solid rgba(147,147,147,1);
       }
