@@ -6,7 +6,7 @@ if($categories){
     $cat_ids[] = $category->term_id;
   }
   $args = array(
-     'posts_per_page'      => 2,
+     'posts_per_page'      => 4,
      'cat'                => implode(",", $cat_ids)
   );
   $related = new WP_Query( $args );

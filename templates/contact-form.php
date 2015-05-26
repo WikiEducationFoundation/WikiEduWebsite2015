@@ -1,4 +1,9 @@
-<?php if(!is_home() || !is_search()) { ?>
+<?php if( (is_front_page() == false) ) { ?>
+<?php if( (is_home() == false) ) { ?>
+<?php if( (is_single() == false) ) { ?>
+<?php if( (is_search() == false) ) { ?>
+<?php if( (is_category() == false) ) { ?>
+<?php if( (is_archive() == false) ) { ?>
 <div class="contact-form">
   <div class="container">
     <div class="row">
@@ -24,6 +29,11 @@
     </div>
   </div>
 </div>
+<?php } ?>
+<?php } ?>
+<?php } ?>
+<?php } ?>
+<?php } ?>
 <?php } ?>
 
 

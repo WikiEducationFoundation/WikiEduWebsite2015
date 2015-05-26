@@ -1,6 +1,6 @@
 <?php while (have_posts()) : the_post(); ?>
 <?php 
-  $thumb_id = get_post_thumbnail_id();
+  $thumb_id = has_post_thumbnail() ? get_post_thumbnail_id() : 4978;
   $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
   $thumb_url = $thumb_url_array[0];
 ?>

@@ -7,6 +7,74 @@ input {
    }
 }
 
+.jetpack_subscription_widget {
+   position: relative;
+   width: 100%;
+
+   &:after {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 0;
+      clear: both;
+   }
+   
+   h3 {
+      display: inline-block;
+      max-width: 40%;
+   }
+
+   #subscribe-email {
+      float: left;
+      width:auto;
+   }
+   
+   #subscribe-text {
+      @extend .col-md-4;
+      padding-left: 0;
+      margin-bottom: 30px;
+      font-size: 15px;
+      
+      & + p{
+         display: none;
+      }
+   }
+   #subscribe-submit {
+      float: left;
+      input[type="submit"] {
+         @extend .btn.btn-default;
+         border-top-left-radius: 0;
+         border-bottom-left-radius: 0;
+         margin-left: -4px;
+      }
+   }
+
+   input {
+      height: 40px;
+      width: 180px !important;
+      font-size: 15px;
+      color: black;
+      line-height: 1.5;
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 0.25em;
+      
+      @include respond-min($screen-xs) {
+         width: 300px !important;
+      }
+      @include respond-min($screen-sm) {
+         width: 400px !important;
+      }
+      @include respond-min($screen-md) {
+         width: 200px !important;
+      }
+      @include respond-min($screen-lg) {
+         width: 300px !important;
+      }
+   }
+
+}
+
 #signup-form {
    position: relative;
    width: 100%;

@@ -22,7 +22,11 @@
         $('.hero-slider').slick();
         var heros = document.querySelectorAll('.hero');
         imagesLoaded( heros, function() {
-          $(this.elements[0]).addClass('active');
+          var self = this;
+          setTimeout(function(){
+            $(self.elements[0]).addClass('active');
+          },1000);
+          
         });
         $('.search-form-container').on('click', function(){
           $target = $(this);

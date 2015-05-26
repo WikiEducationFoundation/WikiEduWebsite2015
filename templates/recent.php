@@ -1,10 +1,10 @@
 <?php
 $args = array(
    'posts_per_page'      => 4,
-   'nopaging'            => true
+   'ignore_sticky_posts' => true
 );
 $query = new WP_Query( $args ); ?>
-<?php if(is_home() || is_search()) { ?>
+<?php if(is_home() || is_search() || is_front_page() || is_category() || is_archive()) { ?>
 <div class="recent-posts">
    <div class="container">
       <div class="row">

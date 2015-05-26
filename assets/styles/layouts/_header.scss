@@ -23,12 +23,12 @@ body > header {
       text-indent: -9999px;
    }
    
-   // .nav {
-   //    display: none;
-   //    @include respond-min($screen-sm) {
-   //       display: block;
-   //    }
-   // }
+   .nav {
+      display: none;
+      @include respond-min($screen-sm) {
+         display: block;
+      }
+   }
 
    .nav li {
       height: 50px;
@@ -65,7 +65,7 @@ body > header {
 }
 
 
-.menu-main-navigation-container {
+.global-nav > div {
    display: inline-block;
    &:after {
       content: '';
