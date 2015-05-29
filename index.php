@@ -1,6 +1,7 @@
 <?php get_template_part('templates/page', 'header'); ?>
 <?php get_template_part('templates/blog-header'); ?>
 
+
 <div class="page-content">
    <div class="row">
    <?php $count = 0; ?>
