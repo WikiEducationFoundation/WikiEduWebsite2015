@@ -19,6 +19,19 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+        $('.brand.mobile-version').on('click',function(e){
+          e.preventDefault();
+          $('.mobile-nav').toggleClass('open');
+        });
+
+        $('.mobile-nav a').on('click',function(e){
+          $('.mobile-nav').toggleClass('open');
+        });
+
+        $('.mobile-nav-close').on('click',function(e){
+          e.preventDefault();
+          $('.mobile-nav').removeClass('open');
+        });
         $('.hero-slider').slick();
         var heros = document.querySelectorAll('.hero');
         imagesLoaded( heros, function() {
@@ -43,6 +56,7 @@
           if(!$('.search-form--header input').is(':focus')){
             $('.search-form-container').removeClass('active');
           }
+          $('.mobile-nav').removeClass('open');
         });
         $(window).on('scroll', function(){
           if(!$('.search-form--header input').is(':focus')){

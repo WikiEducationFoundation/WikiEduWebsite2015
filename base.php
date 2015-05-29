@@ -14,6 +14,17 @@ use Roots\Sage\Wrapper;
         <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
       </div>
     <![endif]-->
+    <nav class="visible-xs mobile-nav">
+      <a class="mobile-nav-close" href="#">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+      </a>
+        <?php
+        if (has_nav_menu('primary_navigation')) :
+          wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'list-unstyled']);
+        endif;
+        ?>
+  
+    </nav>
     <?php
       do_action('get_header');
       get_template_part('templates/header');

@@ -43,6 +43,7 @@ input {
       float: left;
       input[type="submit"] {
          @extend .btn.btn-default;
+         width: 120px !important;
          border-top-left-radius: 0;
          border-bottom-left-radius: 0;
          margin-left: -4px;

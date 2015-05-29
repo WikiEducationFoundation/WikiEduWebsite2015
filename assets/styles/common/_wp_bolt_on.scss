@@ -1,0 +1,92 @@
+.entry-content img {
+  width: auto !important;
+  max-width: 100% !important;
+}
+
+// body.about-us .contact-form {
+//   display: none !important;
+// }
+
+.btn.btn-default, .comment-form input.btn-default[type=submit], .jetpack_subscription_widget #subscribe-submit input[type=submit] {
+  width: 120px !important;
+}
+
+body>header .nav li {
+  height: 35px;
+  margin-top: 15px;
+}
+
+body>header .nav li a {
+  line-height: 30px;
+}
+
+body.admin-bar .mobile-nav-close {
+  top: 50px;
+}
+
+.contact-form h3:first-of-type {
+  margin-bottom: 0;
+}
+
+form.contact-form > div {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+form.contact-form label {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 5px;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 1.06px;
+  font-size: 19px;
+}
+
+form.contact-form input[type='text'], form.contact-form textarea, form.contact-form input[type='email'] {
+  font: inherit;
+  width: 100%;
+  color: #000;
+  height: 45px;
+  line-height: 45px;
+  padding: .5em;
+  font-size: 19px;
+  background-color: #F5F5F5;
+}
+
+form.contact-form textarea {
+  height: auto;
+  line-height: 1.2;
+  max-height: 246px;
+  overflow: auto;
+}
+
+form.contact-form input[type='submit'] {
+  border-radius: 3px;
+  background: #000;
+  color: #fff;
+  font-size: 15px;
+  line-height: 40px;
+  height: 40px;
+  width: 120px;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 0;
+  padding-bottom: 0;
+  border: 1px solid #000;
+  -webkit-transition: all .15s linear;
+  -o-transition: all .15s linear;
+  transition: all .15s linear;
+  float: right;
+  background-color: #F5F5F5;
+  border-color: #F5F5F5;
+  color: #000;
+  font-size: 15px;
+}
+
+.current-menu-item a {
+  border-bottom: 2px solid black;
+}
