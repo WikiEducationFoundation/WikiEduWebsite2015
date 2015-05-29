@@ -11,7 +11,8 @@
          height: auto;
          padding-bottom: 66.66%;
          background: black no-repeat center;
-         background-size: cover;
+         background-size: 100% auto;
+         background-position: 0 0;
          img {
             width: 100%;
             height: auto;
@@ -48,7 +49,10 @@
       }
 
       .entry-summary {
-         min-height: 202px;
+         min-height: auto;
+         @include respond-min($screen-md) {
+            min-height: 202px;
+         }
       }
    }
 }
@@ -59,6 +63,15 @@
    }
 }
 
+.blog-title {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 0;
+
+}
+
 .blog-header {
    position: relative;
    display: block;
@@ -66,6 +79,8 @@
    margin: 0; 
    height: 80px;
    border-bottom: 1px solid #979797;
+   
+
    
    
    
@@ -121,6 +136,9 @@
 
 body.single-post {
    .entry-content {
+      figure {
+         max-width: 100%;
+      }
       img {
          max-width: 100%;
          height: auto;
@@ -130,6 +148,7 @@ body.single-post {
             margin-top: 0;
          }
       }
+      
    }
    .entry-meta {
       display: block;

@@ -1,16 +1,11 @@
 .page-content {
    position: relative;
-    padding-top: 40px;
-    padding-bottom: 40px;
-   
-   body.blog & {
-      padding-top: 30px;
-      padding-bottom: 0;
-      @include respond-min($screen-sm) {
-        padding-top: 40px;
-        padding-bottom: 0;
-      }
-   }
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include respond-min($screen-sm) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
 }
 
 .page.home {
@@ -24,7 +19,16 @@
    }
 }
 
-body.search {
+body.single-post {
+  .hero.no-image{
+    margin-top: 40px;
+    @include respond-min($screen-xs) {
+      margin-top: 0;
+    }
+  }
+}
+
+body.search, body.blog {
 
   .search-results {
     article {
@@ -37,8 +41,8 @@ body.search {
     @include respond-min($screen-sm) {
       padding-top: 160px;
     }
-    @include respond-min($screen-sm) {
-      padding-top: 220px;
+    @include respond-min($screen-md) {
+      padding-top: 180px;
     }
   }
   &.search-no-results {

@@ -1,10 +1,14 @@
 <?php while (have_posts()) : the_post(); ?>
 <?php 
-  $thumb_id = has_post_thumbnail() ? get_post_thumbnail_id() : 4978;
-  $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
-  $thumb_url = $thumb_url_array[0];
+  $is_hero_image = false;
+  $hero_image = '';
+  $hero_class = 'no-image';
+  if(get_field('hero_image')) {
+    $hero_image = get_field('hero_image');
+    $hero_class = '';
+  }   
 ?>
-<div class="hero" style="background-image:url(<?= $thumb_url ?>);background-position: 50% 0%;">
+<div class="hero <?= $hero_class; ?>" style="background-image:url(<?= $hero_image; ?>);background-position: 50% 0%;">
   <div class="hero-gradient"></div>
   <div class="hero-gradient hero-gradient--white"></div>
   <div class="hero-inner">
