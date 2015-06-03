@@ -35,7 +35,7 @@
             <input type="submit" class="btn btn-default" value="Submit" /> 
           </form>
         <?php } else { ?>
-           <?php do_shortcode("[contact-form][contact-field label='Name' type='name' required='1'/][contact-field label='University' type='text' required='1'/][contact-field label='Email' type='email' required='1'/][contact-field label='What would you like help with?' type='textarea' required='1' rows='5' /][/contact-form] ");?>
+           <?php echo do_shortcode("[contact-form][contact-field label='Name' type='name' required='1'/][contact-field label='University' type='text' required='1'/][contact-field label='Email' type='email' required='1'/][contact-field label='What would you like help with?' type='textarea' required='1' rows='5' /][/contact-form] ");?>
         <?php } ?>  
         
 
