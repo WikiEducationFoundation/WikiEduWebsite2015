@@ -2,5 +2,5 @@
  <p class="small">
     San Francisco, CA <br/>
     <a href="mailto:contact@wikiedu.org" target="_blank">contact@wikiedu.org</a> <br/>
-    <a href="http://www.twitter.com/WikiEducation">@WikiFoundation</a>
+    <a href="http://www.twitter.com/WikiEducation">@WikiEducation</a>
  </p>
