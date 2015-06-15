@@ -47,6 +47,14 @@ form.contact-form label {
   font-size: 19px;
 }
 
+.page-content form.contact-form {
+  background: transparent;
+}
+
+.page-content form.contact-form label {
+  color: black;
+}
+
 form.contact-form input[type='text'], form.contact-form textarea, form.contact-form input[type='email'] {
   font: inherit;
   width: 100%;
@@ -67,7 +75,6 @@ form.contact-form textarea {
 
 form.contact-form input[type='submit'] {
   border-radius: 3px;
-  background: #000;
   color: #fff;
   font-size: 15px;
   line-height: 40px;
@@ -88,6 +95,17 @@ form.contact-form input[type='submit'] {
   font-size: 15px;
 }
 
+.page-content form.contact-form input[type='submit'] {
+  background-color: #000;
+  border-color: #000;
+  color: white;
+}
+
 .current-menu-item a {
   border-bottom: 2px solid black;
 }
+
+body.blog .recent-posts {
+  display: none;
+}
+
