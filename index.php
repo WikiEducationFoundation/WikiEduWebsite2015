@@ -1,3 +1,5 @@
+<div class="container">
+
 <?php get_template_part('templates/page', 'header'); ?>
 <?php get_template_part('templates/blog-header'); ?>
 
@@ -14,3 +16,5 @@
 </div>
 
 <?php the_posts_navigation(); ?>
+
+</div>
