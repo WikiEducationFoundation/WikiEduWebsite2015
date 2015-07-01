@@ -14,9 +14,14 @@ if(has_post_thumbnail()) {
   <div class="hero-inner">
     <div class="hero-inner-content">
       <div class="hero-inner-content__cell">
-        <h1><?= Titles\title(); ?></h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8">
+              <h1><?= Titles\title(); ?></h1>
+            </div>
+          </div>
+        </div>
       </div>
-    
     </div>
   </div>
 </div>
