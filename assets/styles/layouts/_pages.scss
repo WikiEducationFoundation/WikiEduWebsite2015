@@ -111,114 +111,116 @@ body.for-instructors {
     }
   }
 
-  ul.tools-list{
-    @extend .list-unstyled;
+  
+}
+
+ul.tools-list{
+  @extend .list-unstyled;
+  display: block;
+  
+  li {
+    @extend .p;
+    position: relative;
+    transition: all 0.15 linear;
     display: block;
-    
-    li {
-      @extend .p;
-      position: relative;
-      transition: all 0.15 linear;
+    width: 100%;
+    height:auto;
+    padding-right: 45px;
+    margin: -1px 0 0 0;
+    background-color: white;
+    border-bottom: 1px solid rgba(147,147,147,1);
+    border-top: 1px solid rgba(147,147,147,1);
+    line-height: 40px;
+    vertical-align: middle;
+    a {
+      color: inherit;
+      text-decoration: none;
       display: block;
       width: 100%;
-      height:auto;
-      padding-right: 45px;
-      margin: -1px 0 0 0;
-      background-color: white;
-      border-bottom: 1px solid rgba(147,147,147,1);
-      border-top: 1px solid rgba(147,147,147,1);
+      padding: 20px 0;
+    }
+    @include respond-min($screen-md) {
+      height: 80px;
+      padding-right: 0;
+    }
+    
+    // &:first-child {
+    //   border-top: 1px solid rgba(147,147,147,1);
+    // }
+
+    
+    
+    p {
+      transition: color 0.15 linear;
+      color: black;
+      font-size: 17px;
       line-height: 40px;
-      vertical-align: middle;
-      a {
-        color: inherit;
-        text-decoration: none;
-        display: block;
-        width: 100%;
-        padding: 20px 0;
+      text-decoration: underline;
+      
+      @include respond-min($screen-md) {
+        display: inline ;
+      }
+    }
+
+    
+    
+    button, .btn {
+      position: absolute;
+      transition: all 0.15s linear;
+      float: none;
+      background: white no-repeat center;
+      color: black;
+      width: 40px;
+      height: 100%;
+      overflow: hidden;
+      text-indent: -9999px;
+      background-image: url(../images/link.png);
+      background-size: 25px auto;
+      border: none;
+      left: auto;
+      right: 0;
+      top: 0;
+      &:hover, &:active {
+        color: transparent;
+        border-color: transparent;
+        background-color: transparent;
       }
       @include respond-min($screen-md) {
-        height: 80px;
-        padding-right: 0;
-      }
-      
-      // &:first-child {
-      //   border-top: 1px solid rgba(147,147,147,1);
-      // }
-
-      
-      
-      p {
-        transition: color 0.15 linear;
+        position: relative;
+        top: auto;
+        right: auto;
         color: black;
-        font-size: 17px;
-        line-height: 40px;
-        text-decoration: underline;
-        
-        @include respond-min($screen-md) {
-          display: inline ;
-        }
-      }
-
-      
-      
-      button, .btn {
-        position: absolute;
-        transition: all 0.15s linear;
-        float: none;
+        float: right;
+        min-width: 160px;
+        height: 40px;
+        border: 2px solid black;
+        text-decoration: none; 
+        text-indent: 0;
         background: white no-repeat center;
-        color: black;
-        width: 40px;
-        height: 100%;
-        overflow: hidden;
-        text-indent: -9999px;
-        background-image: url(../images/link.png);
-        background-size: 25px auto;
-        border: none;
-        left: auto;
-        right: 0;
-        top: 0;
         &:hover, &:active {
-          color: transparent;
-          border-color: transparent;
-          background-color: transparent;
-        }
-        @include respond-min($screen-md) {
-          position: relative;
-          top: auto;
-          right: auto;
-          color: black;
-          float: right;
-          min-width: 160px;
-          height: 40px;
-          border: 2px solid black;
-          text-decoration: none; 
-          text-indent: 0;
-          background: white no-repeat center;
-          &:hover, &:active {
-            color: white;
-            border-color: #E06847;
-            background-color: #E06847;
-          }
+          color: white;
+          border-color: #E06847;
+          background-color: #E06847;
         }
       }
-      &:hover {
-        border-color: #E06847;
+    }
+    &:hover {
+      border-color: #E06847;
+      color: #E06847;
+      p {
         color: #E06847;
-        p {
-          color: #E06847;
-        }
-        & + li {
-          border-top-color: #E06847;
-        }
-        button, .btn {
-          color: transparent;
-          border-color: transparent;
-          background-color: transparent;
-          @include respond-min($screen-md) {
-            color: white;
-            border-color: #E06847;
-            background-color: #E06847;
-          }
+      }
+      & + li {
+        border-top-color: #E06847;
+      }
+      button, .btn {
+        color: transparent;
+        border-color: transparent;
+        background-color: transparent;
+        @include respond-min($screen-md) {
+          color: white;
+          border-color: #E06847;
+          background-color: #E06847;
         }
       }
     }
