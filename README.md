@@ -1,5 +1,5 @@
 #### Todo
-- Automated Deployment of Theme
+- Automated Deployment of Theme; see [Wordpress Deployments with Git](http://mattbanks.me/wordpress-deployments-with-git/)
 
 Originally forked from
 # [Sage](https://roots.io/sage/)
