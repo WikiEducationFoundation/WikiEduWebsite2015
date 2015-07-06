@@ -1,3 +1,6 @@
+#### Todo
+- Automated Deployment of Theme
+
 Originally forked from
 # [Sage](https://roots.io/sage/)
 [![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
