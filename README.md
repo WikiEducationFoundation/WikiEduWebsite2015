@@ -1,3 +1,7 @@
+#### Todo
+- Automated Deployment of Theme; see [Wordpress Deployments with Git](http://mattbanks.me/wordpress-deployments-with-git/)
+
+Originally forked from
 # [Sage](https://roots.io/sage/)
 [![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
 [![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)
