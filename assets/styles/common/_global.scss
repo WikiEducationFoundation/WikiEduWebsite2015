@@ -3,6 +3,7 @@
 body {
    font-family: $font-family-serif;
    padding-bottom: 90px;
+   text-rendering: optimizeLegibility;
 }
 
 ul {

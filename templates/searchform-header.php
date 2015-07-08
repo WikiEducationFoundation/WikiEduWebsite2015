@@ -6,6 +6,7 @@ $extra_class = 'active';
 
 ?>
 
+<span class="glyphicon glyphicon-menu-hamburger show-mobile-menu"></span>
 <div class="search-form-container <?= $extra_class ?>">
 <form role="search" method="get" class="search-form--header" action="<?= esc_url(home_url('/')); ?>">
   <div class="input-group">

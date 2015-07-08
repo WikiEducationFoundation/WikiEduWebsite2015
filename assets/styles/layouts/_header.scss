@@ -133,7 +133,7 @@ nav.mobile-nav {
    display: block;
    width: 190px;
    top: 0;
-   left: -190px;
+   right: -190px;
    height: 100%;
    padding: 20px 20px 0;
    z-index:100;
@@ -168,7 +168,7 @@ nav.mobile-nav {
 
    &.open {
       transition: all 0.15s ease-in;
-      left: 0;
+      right: 0;
    }
 
    .mobile-nav-close {
@@ -187,6 +187,19 @@ nav.mobile-nav {
          font-weight: 200;
       }
    }
+}
+
+.show-mobile-menu {
+  display: none;
+  cursor: pointer;
+  float: right;
+  font-size: 22px;
+  color: $brand-primary;
+  margin-top: 0.7em;
+  margin-left: 0.7em;
+  @media (max-width: 767px) {
+     display: block;
+  }
 }
 
 .search-form-container {

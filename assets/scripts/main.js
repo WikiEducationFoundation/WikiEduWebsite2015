@@ -19,7 +19,7 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
-        $('.brand.mobile-version').on('click',function(e){
+        $('.show-mobile-menu').on('click',function(e){
           e.preventDefault();
           $('.mobile-nav').toggleClass('open');
         });
