@@ -320,6 +320,15 @@ hr {
       margin: 30px 15px;
     }
   }
+  @media (max-width: 500px) {
+    img {
+      display: none;
+    }
+  }
+}
+
+.slick-slide .blockquote-media blockquote p {
+  margin-top: 0;
 }
 
 // Class applied with JS
@@ -401,4 +410,13 @@ hr.multicolor {
 
 .slick-slideable {
   width: 100%;
+}
+
+blockquote.slick-slide p {
+  font-size: 21px;
+  line-height: 1.41;
+}
+
+.precedes-hr {
+  margin-bottom: 50px;
 }
