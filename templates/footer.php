@@ -31,7 +31,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-8 brochure-footer-inner">
-            <h1><?php _e(custom_field('footer_text')) ?></h1>
+            <h1 class="<?php _e(custom_field('footer_h1_class')) ?>"><?php _e(custom_field('footer_text')) ?></h1>
             <a href="<?php _e(custom_field('footer_link')) ?>">Learn More</a>
           </div>
         </div>

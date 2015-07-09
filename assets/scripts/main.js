@@ -64,6 +64,9 @@
           }
         });
 
+        // Fix WP automatically adding <p> tags, even in the HTML editor
+        $('cite').closest('p').addClass('cite-parent-p');
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

@@ -5,3 +5,19 @@
     margin: 0;
   }
 }
+
+.brochure-footer-inner {
+  padding: 105px 0;
+  color: #fff;
+  h1 {
+    width: 600px;
+    &.extra-long {
+      width: 800px;
+    }
+  }
+  a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 19px;
+  }
+}
