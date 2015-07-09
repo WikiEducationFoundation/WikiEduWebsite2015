@@ -29,11 +29,9 @@
   <div class="footer-img-w-link" style="background:linear-gradient(rgba(0,0,0,0.24), rgba(0,0,0,0.24)),url('<?php _e(custom_field('footer_image_url')) ?>') 50% 90% no-repeat; background-size: 100% auto">
     <div class="content">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-8 brochure-footer-inner">
-            <h1 class="<?php _e(custom_field('footer_h1_class')) ?>"><?php _e(custom_field('footer_text')) ?></h1>
-            <a href="<?php _e(custom_field('footer_link')) ?>">Learn More</a>
-          </div>
+        <div class="col-sm-8 brochure-footer-inner">
+          <h1 class="<?php _e(custom_field('footer_h1_class')) ?>"><?php _e(custom_field('footer_text')) ?></h1>
+          <a href="<?php _e(custom_field('footer_link')) ?>">Learn More</a>
         </div>
       </div>
     </div>

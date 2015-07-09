@@ -8,9 +8,15 @@
 
 .brochure-footer-inner {
   padding: 105px 0;
+  @media (max-width: 900px) {
+    padding: 55px 0;
+  }
   color: #fff;
   h1 {
     width: 600px;
+    @media (max-width: 620px) {
+      width: 100% !important;
+    }
     &.extra-long {
       width: 800px;
     }
@@ -19,5 +25,11 @@
     color: #fff;
     text-decoration: underline;
     font-size: 19px;
+  }
+}
+
+.footer-img-w-link {
+  @media (max-width: 767px) {
+    background-size: auto !important;
   }
 }

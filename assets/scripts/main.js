@@ -39,7 +39,6 @@
           setTimeout(function(){
             $(self.elements[0]).addClass('active');
           },1000);
-          
         });
         $('.search-form-container').on('click', function(){
           $target = $(this);
@@ -48,7 +47,34 @@
             setTimeout(function(){
               $target.find('input').first().focus();
             },200);
-      
+
+          }
+        });
+
+        // Didn't want to do this by disabling wpautop in case other pages rely on it
+        $('.slideable-content-block').find('p:empty').remove();
+
+        var slickInit = function() {
+          $('.slideable-content-block').slick({
+            slide: 'section',
+            dots: true,
+            infinite: false
+          });
+        };
+
+        enquire.register("(min-width: 767px)", {
+          match: function(){
+            if ( $('.slick-initialized').length ) {
+              $('.slideable-content-block').slick('unslick');
+            }
+          },
+          unmatch: function(){
+            slickInit();
+          },
+          setup: function(){
+            if ( $(window).width() <= 767) {
+              slickInit();
+            }
           }
         });
 

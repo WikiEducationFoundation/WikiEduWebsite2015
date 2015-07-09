@@ -249,6 +249,15 @@ body {
     padding-bottom: 0;
     overflow-x: hidden;
   }
+  .hero.active {
+    @media (max-width: 475px) {
+      height: 234px;
+      h1 {
+        font-size: 26px;
+        line-height: 1.2;
+      }
+    }
+  }
 }
 
 /* Thanks for adding p tags, WordPress. */
@@ -269,6 +278,14 @@ hr {
 
 .hero-inner .hero-inner-content h1.page-brochure {
   margin-bottom: 70px;
+}
+
+.hero {
+  background-repeat: no-repeat;
+  @media (max-width: 500px) {
+    /* override inline style */
+    background-size: 500px !important;
+  }
 }
 
 .postid-5585 {
@@ -342,11 +359,20 @@ blockquote .cite-parent-p {
 
 .stat-figure {
   font-size: 120px;
-  line-height: 125px;
+  line-height: 1;
+  @media (max-width: 767px) and (min-width: 501px) {
+    font-size: 100px;
+  }
+  @media (max-width: 500px) {
+    font-size: 79px;
+  }
 }
 
 .stat-explanation {
   padding-top: 45px;
+  @media (max-width: 767px) {
+    padding-top: 0;
+  }
 }
 
 hr.multicolor {
@@ -360,4 +386,19 @@ hr.multicolor {
   height: 3px;
 }
 
+.slick-dots li {
+  &.slick-active button {
+    background: #bcbcbc;
+  }
+  button {
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    border: 1.5px solid #bcbcbc;
+    text-indent: -9999px;
+  }
+}
 
+.slick-slideable {
+  width: 100%;
+}
