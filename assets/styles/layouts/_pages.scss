@@ -245,7 +245,6 @@ body.blog {
 }
 
 body {
-<<<<<<< HEAD
   &.brochure-page {
     padding-bottom: 0;
     overflow-x: hidden;
@@ -259,43 +258,28 @@ body {
       }
     }
   }
-=======
-  &.page-id-5585 {
+  &.page-id-5585, &.page-id-5596 {
     padding-bottom: 0;
     overflow-x: hidden;
   }
->>>>>>> Add first brochure page and make mobile menu slide from right
 }
 
 /* Thanks for adding p tags, WordPress. */
 blockquote p cite {
-<<<<<<< HEAD
   font-size: 16px;
 }
-
 
 hr {
   &.short {
     width: 30px;
     border-top: 2px solid $hr_color;
   }
-  &.full-width {
-    border-top-width: 2px;
-=======
-  font-size: 19px;
-}
-
-.brochure-footer-inner {
-  padding: 105px 0;
-  color: #fff;
-  h1 {
-    width: 600px;
-  }
   a {
     color: #fff;
     text-decoration: underline;
     font-size: 19px;
->>>>>>> Add first brochure page and make mobile menu slide from right
+  &.full-width {
+    border-top-width: 2px;
   }
 }
 
@@ -303,7 +287,6 @@ hr {
   margin-bottom: 70px;
 }
 
-<<<<<<< HEAD
 .hero {
   background-repeat: no-repeat;
   @media (max-width: 500px) {
@@ -312,15 +295,12 @@ hr {
   }
 }
 
-=======
->>>>>>> Add first brochure page and make mobile menu slide from right
 .postid-5585 {
   opacity: 0.89;
 }
 
 .brochure-blockquote {
   display: inline-block;
-<<<<<<< HEAD
   margin: {
     top: 30px;
     bottom: 30px;
@@ -359,15 +339,20 @@ hr {
       }
     }
   }
-=======
->>>>>>> Add first brochure page and make mobile menu slide from right
+  margin: 30px 0;
+}
+
+.blockquote-large {
+  margin: 80px 0;
+  &.min-margin {
+    margin: 40px 0;
+  }
   p {
     font-size: 36px;
     line-height: 45px;
   }
 }
 
-<<<<<<< HEAD
 .blockquote-media {
   blockquote {
     margin: {
@@ -376,6 +361,7 @@ hr {
       right: 0;
     }
   }
+.blockquote-media {
   &:first-child {
     margin-bottom: 20px;
     display: inline-block;
@@ -402,6 +388,12 @@ hr {
 
 .slick-slide .blockquote-media blockquote p {
   margin-top: 0;
+    p {
+      font-size: 26px;
+      text-align: left;
+      margin: 30px 15px;
+    }
+  }
 }
 
 // Class applied with JS
@@ -410,8 +402,6 @@ blockquote .cite-parent-p {
   margin-top: -20px;
 }
 
-=======
->>>>>>> Add first brochure page and make mobile menu slide from right
 .stat {
   padding-top: 10px;
   margin-bottom: 1em;
@@ -444,32 +434,24 @@ blockquote .cite-parent-p {
 
 .stat-figure {
   font-size: 120px;
-<<<<<<< HEAD
-  line-height: 1;
+  line-height: 125px;
   @media (max-width: 767px) and (min-width: 501px) {
     font-size: 100px;
   }
   @media (max-width: 500px) {
     font-size: 79px;
   }
-=======
-  line-height: 125px;
->>>>>>> Add first brochure page and make mobile menu slide from right
 }
 
 .stat-explanation {
   padding-top: 45px;
-<<<<<<< HEAD
   @media (max-width: 767px) {
     padding-top: 0;
   }
-=======
->>>>>>> Add first brochure page and make mobile menu slide from right
 }
 
 hr.multicolor {
   background: $yellow;
-<<<<<<< HEAD
   background: -moz-linear-gradient(left, $yellow 0%, $yellow 25%, $green 25%, $green 50%, $orange 50%, $orange 75%, $purple 75%, $purple 100%, $purple 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, right top, color-stop(0%,$yellow), color-stop(25%,$yellow), color-stop(25%,$green), color-stop(50%,$green), color-stop(50%,$orange), color-stop(75%,$orange), color-stop(75%,$purple), color-stop(100%,$purple), color-stop(100%,$purple)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(left, $yellow 0%,$yellow 25%,$green 25%,$green 50%,$orange 50%,$orange 75%,$purple 75%,$purple 100%,$purple 100%); /* Chrome10+,Safari5.1+ */
@@ -540,15 +522,3 @@ img {
     margin: 25px auto;
   }
 }
-=======
-  background: -moz-linear-gradient(left, $yellow 0%, $yellow 24%, $green 24%, $green 50%, $orange 50%, $orange 75%, $purple 75%, $purple 100%, $purple 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,$yellow), color-stop(24%,$yellow), color-stop(24%,$green), color-stop(50%,$green), color-stop(50%,$orange), color-stop(75%,$orange), color-stop(75%,$purple), color-stop(100%,$purple), color-stop(100%,$purple)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, $yellow 0%,$yellow 24%,$green 24%,$green 50%,$orange 50%,$orange 75%,$purple 75%,$purple 100%,$purple 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, $yellow 0%,$yellow 24%,$green 24%,$green 50%,$orange 50%,$orange 75%,$purple 75%,$purple 100%,$purple 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, $yellow 0%,$yellow 24%,$green 24%,$green 50%,$orange 50%,$orange 75%,$purple 75%,$purple 100%,$purple 100%); /* IE10+ */
-  background: linear-gradient(to right, $yellow 0%,$yellow 24%,$green 24%,$green 50%,$orange 50%,$orange 75%,$purple 75%,$purple 100%,$purple 100%);
-  height: 3px;
-}
-
-
->>>>>>> Add first brochure page and make mobile menu slide from right
