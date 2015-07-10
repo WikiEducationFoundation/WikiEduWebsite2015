@@ -109,11 +109,20 @@ blockquote {
       font-size: 26px;
       line-height: 40px;
       font-style: italic;
+      @media (max-width: 500px) {
+        font-size: 24px;
+        line-height: 33px;
+      }
+      &:not(.visual-element) {
+        @media (max-width: 500px) {
+          text-align: left;
+        }
+      }
    }
 
    @include respond-min($screen-sm) {
       margin: 30px -40px 30px -40px;
    }
-   
+
 }
 

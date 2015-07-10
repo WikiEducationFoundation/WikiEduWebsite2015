@@ -262,7 +262,7 @@ body {
 
 /* Thanks for adding p tags, WordPress. */
 blockquote p cite {
-  font-size: 19px;
+  font-size: 16px;
 }
 
 
@@ -294,13 +294,43 @@ hr {
 
 .brochure-blockquote {
   display: inline-block;
-  margin: 30px 0;
+  margin: {
+    top: 30px;
+    bottom: 30px;
+  }
 }
 
 .blockquote-large {
-  margin: 80px 0;
+  &.extra-margin {
+    margin: {
+      top: 80px;
+      bottom: 80px;
+    }
+    @media (max-width: 500px) {
+      margin: {
+        top: 40px;
+        bottom: 50px;
+      }
+    }
+  }
+  &.centered {
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
   &.min-margin {
-    margin: 40px 0;
+    margin: {
+      top: 40px;
+      bottom: 40px;
+    }
+    @media (max-width: 500px) {
+      font-size: 24px;
+      margin: {
+        top: 20px;
+        bottom: 20px;
+      }
+    }
   }
   p {
     font-size: 36px;
@@ -309,11 +339,21 @@ hr {
 }
 
 .blockquote-media {
+  blockquote {
+    margin: {
+      top: 65px;
+      left: 0;
+      right: 0;
+    }
+  }
   &:first-child {
     margin-bottom: 20px;
     display: inline-block;
   }
   .brochure-blockquote {
+    @media (max-width: 767px) {
+      margin-bottom: 0;
+    }
     p {
       font-size: 26px;
       text-align: left;
@@ -333,6 +373,7 @@ hr {
 // Class applied with JS
 blockquote .cite-parent-p {
   line-height: 29px;
+  margin-top: -20px;
 }
 
 .stat {
@@ -377,7 +418,7 @@ blockquote .cite-parent-p {
 }
 
 .stat-explanation {
-  padding-top: 45px;
+  padding-top: 75px;
   @media (max-width: 767px) {
     padding-top: 0;
   }
@@ -392,6 +433,9 @@ hr.multicolor {
   background: -ms-linear-gradient(left, $yellow 0%,$yellow 25%,$green 25%,$green 50%,$orange 50%,$orange 75%,$purple 75%,$purple 100%,$purple 100%); /* IE10+ */
   background: linear-gradient(to right, $yellow 0%,$yellow 25%,$green 25%,$green 50%,$orange 50%,$orange 75%,$purple 75%,$purple 100%,$purple 100%);
   height: 3px;
+  &.no-top-margin {
+    margin-top: 0;
+  }
 }
 
 .slick-dots li {
@@ -411,13 +455,11 @@ hr.multicolor {
   width: 100%;
 }
 
-blockquote.slick-slide p {
-  font-size: 21px;
-  line-height: 1.41;
-}
-
 .precedes-hr {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+  @media (max-width: 767px) {
+    margin-bottom: 45px;
+  }
 }
 
 img {
@@ -427,4 +469,30 @@ img {
 /* TODO: Get approved content and remove */
 .temporary-text {
   color: red;
+}
+
+.callout {
+  font-size: 26px;
+  width: 95%;
+  text-align: center;
+  line-height: 35px;
+  margin: 60px auto;
+  @media (max-width: 500px) {
+    margin: 30px auto;
+  }
+  &.large {
+    font-size: 30px;
+    line-height: 40px;
+    width: 85%;
+    @media (max-width: 500px) {
+      font-size: 24px;
+    }
+  }
+  &.left {
+    text-align: left;
+    width: 100%;
+  }
+  &.min-callout-margin {
+    margin: 25px auto;
+  }
 }
