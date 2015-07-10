@@ -203,21 +203,24 @@ nav.mobile-nav {
 }
 
 .search-form-container {
-   display: inline-block;
-   height: 30px;
-   float: right;
-   vertical-align: middle; 
-   margin-top: 13px;
-   margin-left: 15px;
+  display: inline-block;
+  height: 30px;
+  float: right;
+  vertical-align: middle; 
+  margin-top: 13px;
+  margin-left: 15px;
+  @media (max-width: 325px) {
+    margin-left: 5px;
+  }
 
-   .search-form--header {
-      transition: all 0.15s ease-in;
-      width: 30px;
-      
+  .search-form--header {
+    transition: all 0.15s ease-in;
+    width: 30px;
+
       .input-group {
          position: relative;
          width: 100%;
-         
+
          input {
             transition: background-color 0.15s 0.15s linear;
             width: 100%;

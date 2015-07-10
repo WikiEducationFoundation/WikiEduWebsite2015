@@ -15,6 +15,7 @@
   h1 {
     width: 600px;
     @media (max-width: 620px) {
+      /* important here and below needed to overwrite dynamic inline styles */
       width: 100% !important;
     }
     &.extra-long {
@@ -45,6 +46,6 @@
 
 .footer-img-w-link {
   @media (max-width: 767px) {
-    background-size: auto !important;
+    background-size: 560px !important;
   }
 }
