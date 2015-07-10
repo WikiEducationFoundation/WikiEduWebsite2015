@@ -53,8 +53,9 @@
 
         // Didn't want to do this by disabling wpautop in case other pages rely on it
         $('.slideable-content-block').find('p:empty').remove();
+        $('.page-id-5596').find('br').remove();
 
-        var slickInit = function() {
+        var slickInit = function(){
           $('.slideable-content-block').slick({
             slide: 'section',
             dots: true,

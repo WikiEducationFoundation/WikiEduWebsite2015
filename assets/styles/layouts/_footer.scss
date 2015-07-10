@@ -28,6 +28,21 @@
   }
 }
 
+/* Fix weird issue in Firefox where link underline is crossing through text */
+@-moz-document url-prefix() {
+  .brochure-footer-inner a {
+      text-decoration: none;
+      border-bottom: 1px solid;
+      padding-bottom: 7px;
+    }
+
+  /* account for Firefox's weird rendering of large type in this font */
+  .stat-figure {
+    position: relative;
+    bottom: 40px;
+  }
+}
+
 .footer-img-w-link {
   @media (max-width: 767px) {
     background-size: auto !important;

@@ -317,7 +317,6 @@ hr {
     p {
       font-size: 26px;
       text-align: left;
-      margin: 30px 15px;
     }
   }
   @media (max-width: 500px) {
@@ -386,12 +385,12 @@ blockquote .cite-parent-p {
 
 hr.multicolor {
   background: $yellow;
-  background: -moz-linear-gradient(left, $yellow 0%, $yellow 24%, $green 24%, $green 50%, $orange 50%, $orange 75%, $purple 75%, $purple 100%, $purple 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,$yellow), color-stop(24%,$yellow), color-stop(24%,$green), color-stop(50%,$green), color-stop(50%,$orange), color-stop(75%,$orange), color-stop(75%,$purple), color-stop(100%,$purple), color-stop(100%,$purple)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, $yellow 0%,$yellow 24%,$green 24%,$green 50%,$orange 50%,$orange 75%,$purple 75%,$purple 100%,$purple 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, $yellow 0%,$yellow 24%,$green 24%,$green 50%,$orange 50%,$orange 75%,$purple 75%,$purple 100%,$purple 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, $yellow 0%,$yellow 24%,$green 24%,$green 50%,$orange 50%,$orange 75%,$purple 75%,$purple 100%,$purple 100%); /* IE10+ */
-  background: linear-gradient(to right, $yellow 0%,$yellow 24%,$green 24%,$green 50%,$orange 50%,$orange 75%,$purple 75%,$purple 100%,$purple 100%);
+  background: -moz-linear-gradient(left, $yellow 0%, $yellow 25%, $green 25%, $green 50%, $orange 50%, $orange 75%, $purple 75%, $purple 100%, $purple 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,$yellow), color-stop(25%,$yellow), color-stop(25%,$green), color-stop(50%,$green), color-stop(50%,$orange), color-stop(75%,$orange), color-stop(75%,$purple), color-stop(100%,$purple), color-stop(100%,$purple)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, $yellow 0%,$yellow 25%,$green 25%,$green 50%,$orange 50%,$orange 75%,$purple 75%,$purple 100%,$purple 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, $yellow 0%,$yellow 25%,$green 25%,$green 50%,$orange 50%,$orange 75%,$purple 75%,$purple 100%,$purple 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, $yellow 0%,$yellow 25%,$green 25%,$green 50%,$orange 50%,$orange 75%,$purple 75%,$purple 100%,$purple 100%); /* IE10+ */
+  background: linear-gradient(to right, $yellow 0%,$yellow 25%,$green 25%,$green 50%,$orange 50%,$orange 75%,$purple 75%,$purple 100%,$purple 100%);
   height: 3px;
 }
 
@@ -419,4 +418,8 @@ blockquote.slick-slide p {
 
 .precedes-hr {
   margin-bottom: 50px;
+}
+
+img {
+  max-width: 100%;
 }
