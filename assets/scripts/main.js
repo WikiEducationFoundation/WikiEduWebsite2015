@@ -79,6 +79,11 @@
           }
         });
 
+        // Add class with JS because there isn't way from within theme PHP files
+        if ( $('.footer-img-w-link').length ) {
+          $('body').addClass('brochure-page');
+        }
+
         $(window).on('resize', function(){
           if(!$('.search-form--header input').is(':focus')){
             $('.search-form-container').removeClass('active');
