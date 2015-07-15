@@ -341,7 +341,7 @@ hr {
 .blockquote-media {
   blockquote {
     margin: {
-      top: 65px;
+      top: 30px;
       left: 0;
       right: 0;
     }
@@ -357,6 +357,10 @@ hr {
     p {
       font-size: 26px;
       text-align: left;
+    }
+    &.side-by-side p {
+      font-size: 21px;
+      line-height: 32px;
     }
   }
   @media (max-width: 500px) {
@@ -418,7 +422,7 @@ blockquote .cite-parent-p {
 }
 
 .stat-explanation {
-  padding-top: 75px;
+  padding-top: 45px;
   @media (max-width: 767px) {
     padding-top: 0;
   }
