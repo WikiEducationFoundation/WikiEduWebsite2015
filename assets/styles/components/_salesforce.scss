@@ -1,0 +1,78 @@
+body.signup { 
+	.hero {
+		display: none;	  
+	}
+	.row code {
+		font-family: "Cardo",Georgia,Cambria,"Times New Roman",Times,serif;
+	}
+	.navbar-right, footer {
+		display: none;
+	}
+	header .header-inner .brand {
+		float: none;
+		margin: 0 auto;
+	}
+	.salesforce--header {
+		max-width: 300px;
+		margin: 130px auto 20px auto;
+		text-align: center;
+	}
+}
+
+
+body.signup form {
+	margin-top: 100px;
+	p {
+		@include clearfix;
+		max-width: 300px;
+		margin: 10px auto 20px auto;
+	}
+	p:first-child, p:nth-child(2) {
+		display: none;
+	}
+	p:last-child {
+		text-align: center;
+	}
+	label {
+		width: 100%;
+		margin-bottom: -5px;
+		font-size: 17px;
+		font-weight: 300;
+		color: #000;
+	}
+	input, textarea {
+		width: 100%;
+		padding: 7px 5px 3px 5px;
+		border: 1px #A0A0A0 solid;
+		border-radius: 5px;
+		color: #000000;
+	}
+	#submit {
+		width: 120px;
+		padding: 8px 0 5px 0;
+		margin: 0 auto;
+		background: #000;
+		color: #ffffff;
+	}
+	input:focus {
+		outline-radius: 5px;
+	}
+	input.parsley-success,
+	select.parsley-success,
+	textarea.parsley-success {
+	  background:rgba(62, 151, 64, .1	);
+		border-color:rgba(62, 151, 64, .8);
+	}
+	input.parsley-error,
+	select.parsley-error,
+	textarea.parsley-error {
+	  background:rgba(233, 50, 42, .1	);
+		border-color:rgba(233, 50, 42, .8);
+	}
+	.parsley-errors-list li {
+		float: right;
+		margin-bottom: -15px;
+		font-size: 13px;
+		color: #3C3C3C;
+	}
+}
