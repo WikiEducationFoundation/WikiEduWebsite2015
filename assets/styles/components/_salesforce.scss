@@ -22,6 +22,13 @@ body.signup {
 
 body.signup form {
 	margin-top: 100px;
+	
+	.thanks {
+	  text-align: center;
+	  margin-bottom: 20px;
+	  display: none;
+	}
+
 	p {
 		@include clearfix;
 		max-width: 300px;
