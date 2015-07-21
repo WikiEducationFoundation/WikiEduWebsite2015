@@ -43,6 +43,39 @@ body > header {
       }
    }
 
+   .sub-menu {
+      visibility: hidden;
+      position: absolute;
+      padding: 0;
+      top: 35px;
+      left: 0;
+      width: 300px;
+      opacity: 0;
+      transition: (opacity 200ms);
+     
+     .menu-item, li, a {
+       margin: 0;
+       padding: 0;
+       text-decoration: none;
+     }
+   }
+
+   .menu-item-has-children:hover {
+
+     .sub-menu {
+       visibility: visible;
+       opacity: 1;
+     }
+
+     li {
+       display: block !important;
+     }
+
+     a {
+       // display: inline-block !important;
+     }
+   }
+
    .nav li {
       height: 35px;
       background:transparent !important;
@@ -110,6 +143,11 @@ nav.mobile-nav {
    body.admin-bar &{
       padding-top: 50px;
    }
+
+   .sub-menu {
+      display: none;
+   }
+
    ul {
       li {
          border-bottom: 1px solid white;
