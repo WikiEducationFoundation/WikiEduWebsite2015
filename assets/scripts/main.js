@@ -19,7 +19,7 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
-        $('.brand.mobile-version').on('click',function(e){
+        $('.show-mobile-menu').on('click',function(e){
           e.preventDefault();
           $('.mobile-nav').toggleClass('open');
         });
@@ -39,7 +39,6 @@
           setTimeout(function(){
             $(self.elements[0]).addClass('active');
           },1000);
-          
         });
         $('.search-form-container').on('click', function(){
           $target = $(this);
@@ -48,9 +47,42 @@
             setTimeout(function(){
               $target.find('input').first().focus();
             },200);
-      
+
           }
         });
+
+        // Didn't want to do this by disabling wpautop in case other pages rely on it
+        $('p:empty').remove();
+        $('.page-id-5596').find('br').remove();
+
+        var slickInit = function(){
+          $('.slideable-content-block').slick({
+            slide: 'section',
+            dots: true,
+            infinite: false
+          });
+        };
+
+        enquire.register("(min-width: 767px)", {
+          match: function(){
+            if ( $('.slick-initialized').length ) {
+              $('.slideable-content-block').slick('unslick');
+            }
+          },
+          unmatch: function(){
+            slickInit();
+          },
+          setup: function(){
+            if ( $(window).width() <= 767) {
+              slickInit();
+            }
+          }
+        });
+
+        // Add class with JS because there isn't way from within theme PHP files
+        if ( $('.footer-img-w-link').length ) {
+          $('body').addClass('brochure-page');
+        }
 
         $(window).on('resize', function(){
           if(!$('.search-form--header input').is(':focus')){
@@ -63,6 +95,9 @@
             $('.search-form-container').removeClass('active');
           }
         });
+
+        // Fix WP automatically adding <p> tags, even in the HTML editor
+        $('cite').closest('p').addClass('cite-parent-p');
 
       },
       finalize: function() {

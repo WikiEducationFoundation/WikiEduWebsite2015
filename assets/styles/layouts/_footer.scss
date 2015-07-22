@@ -5,3 +5,56 @@
     margin: 0;
   }
 }
+
+.brochure-footer-inner {
+  padding: 105px 0;
+  @media (max-width: 900px) {
+    padding: 55px 0;
+  }
+  color: #fff;
+  h1 {
+    width: 600px;
+    @media (max-width: 730px) {
+      /* important here and below needed to overwrite dynamic inline styles */
+      width: 100% !important;
+    }
+    &.extra-long {
+      width: 800px;
+    }
+  }
+  a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 19px;
+  }
+}
+
+/* Fix weird issue in Firefox where link underline is crossing through text */
+@-moz-document url-prefix() {
+  .brochure-footer-inner a {
+      text-decoration: none;
+      border-bottom: 1px solid;
+      padding-bottom: 7px;
+    }
+
+  /* account for Firefox's weird rendering of large type in this font */
+  .stat-figure {
+    position: relative;
+    bottom: 40px;
+    @media (max-width: 500px) {
+      bottom: 20px;
+    }
+  }
+}
+
+.footer-img-w-link {
+  @media (min-width: 768px) {
+    background-position: 50% 50% !important;
+  }
+  @media (max-width: 767px) and (min-width: 501px) {
+    background-size: 800px !important;
+  }
+  @media (max-width: 500px) {
+    background-size: 701px !important;
+  }
+}
