@@ -60,6 +60,29 @@ General CSS utilities and SASS mixins
   text-align: center;
 }
 
+.no-bullets {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+  &.min-leading li {
+    margin-bottom: 0;
+    line-height: 1.75;
+  }
+}
+
+.callout {
+  font-size: 26px;
+  width: 95%;
+  text-align: center;
+  line-height: 35px;
+  margin: 60px auto;
+  &.large {
+    font-size: 30px;
+    line-height: 40px;
+    width: 85%;
+  }
+}
+
 /* Responsive Mixins
    see: http://jakearchibald.github.com/sass-ie
 ------------------------------------------------ */

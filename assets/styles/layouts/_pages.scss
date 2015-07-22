@@ -243,3 +243,285 @@ body.blog {
     display: none;
   }
 }
+
+body {
+  &.brochure-page {
+    padding-bottom: 0;
+    overflow-x: hidden;
+  }
+  .hero.active {
+    @media (max-width: 475px) {
+      height: 234px;
+      h1 {
+        font-size: 26px;
+        line-height: 1.2;
+      }
+    }
+  }
+  &.page-id-5585, &.page-id-5596 {
+    padding-bottom: 0;
+    overflow-x: hidden;
+  }
+}
+
+/* Thanks for adding p tags, WordPress. */
+blockquote p cite {
+  font-size: 16px;
+}
+
+hr {
+  &.short {
+    width: 30px;
+    border-top: 2px solid $hr_color;
+  }
+  a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 19px;
+  &.full-width {
+    border-top-width: 2px;
+  }
+}
+
+.hero-inner .hero-inner-content h1.page-brochure {
+  margin-bottom: 70px;
+}
+
+.hero {
+  background-repeat: no-repeat;
+  @media (max-width: 500px) {
+    /* override inline style */
+    background-size: 500px !important;
+  }
+}
+
+.postid-5585 {
+  opacity: 0.89;
+}
+
+.brochure-blockquote {
+  display: inline-block;
+  margin: {
+    top: 30px;
+    bottom: 30px;
+  }
+}
+
+.blockquote-large {
+  &.extra-margin {
+    margin: {
+      top: 80px;
+      bottom: 80px;
+    }
+    @media (max-width: 500px) {
+      margin: {
+        top: 40px;
+        bottom: 50px;
+      }
+    }
+  }
+  &.centered {
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+  &.min-margin {
+    margin: {
+      top: 40px;
+      bottom: 40px;
+    }
+    @media (max-width: 500px) {
+      font-size: 24px;
+      margin: {
+        top: 20px;
+        bottom: 20px;
+      }
+    }
+  }
+  margin: 30px 0;
+}
+
+.blockquote-large {
+  margin: 80px 0;
+  &.min-margin {
+    margin: 40px 0;
+  }
+  p {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+
+.blockquote-media {
+  blockquote {
+    margin: {
+      top: 30px;
+      left: 0;
+      right: 0;
+    }
+  }
+.blockquote-media {
+  &:first-child {
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+  .brochure-blockquote {
+    @media (max-width: 767px) {
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 26px;
+      text-align: left;
+    }
+    &.side-by-side p {
+      font-size: 21px;
+      line-height: 32px;
+    }
+  }
+  @media (max-width: 500px) {
+    img {
+      display: none;
+    }
+  }
+}
+
+.slick-slide .blockquote-media blockquote p {
+  margin-top: 0;
+    p {
+      font-size: 26px;
+      text-align: left;
+      margin: 30px 15px;
+    }
+  }
+}
+
+// Class applied with JS
+blockquote .cite-parent-p {
+  line-height: 29px;
+  margin-top: -20px;
+}
+
+.stat {
+  padding-top: 10px;
+  margin-bottom: 1em;
+
+  span:not(.hidden-xs) {
+    display: block;
+  }
+
+  &.yellow {
+    border-top: 3px solid $yellow;
+  }
+
+  &.green {
+    border-top: 3px solid $green;
+  }
+
+  &.orange {
+    border-top: 3px solid $orange;
+  }
+
+  &.purple {
+    border-top: 3px solid $purple;
+  }
+}
+
+.stat-title {
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+
+.stat-figure {
+  font-size: 120px;
+  line-height: 125px;
+  font-family: 'Times New Roman', serif;
+  position: relative;
+  bottom: 10px;
+  @media (max-width: 767px) and (min-width: 501px) {
+    font-size: 100px;
+  }
+  @media (max-width: 500px) {
+    font-size: 79px;
+  }
+}
+
+.stat-explanation {
+  padding-top: 45px;
+  @media (max-width: 767px) {
+    padding-top: 0;
+  }
+}
+
+hr.multicolor {
+  background: $yellow;
+  background: -moz-linear-gradient(left, $yellow 0%, $yellow 25%, $green 25%, $green 50%, $orange 50%, $orange 75%, $purple 75%, $purple 100%, $purple 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,$yellow), color-stop(25%,$yellow), color-stop(25%,$green), color-stop(50%,$green), color-stop(50%,$orange), color-stop(75%,$orange), color-stop(75%,$purple), color-stop(100%,$purple), color-stop(100%,$purple)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, $yellow 0%,$yellow 25%,$green 25%,$green 50%,$orange 50%,$orange 75%,$purple 75%,$purple 100%,$purple 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, $yellow 0%,$yellow 25%,$green 25%,$green 50%,$orange 50%,$orange 75%,$purple 75%,$purple 100%,$purple 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, $yellow 0%,$yellow 25%,$green 25%,$green 50%,$orange 50%,$orange 75%,$purple 75%,$purple 100%,$purple 100%); /* IE10+ */
+  background: linear-gradient(to right, $yellow 0%,$yellow 25%,$green 25%,$green 50%,$orange 50%,$orange 75%,$purple 75%,$purple 100%,$purple 100%);
+  height: 3px;
+  &.no-top-margin {
+    margin-top: 0;
+  }
+}
+
+.slick-dots li {
+  &.slick-active button {
+    background: #bcbcbc;
+  }
+  button {
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    border: 1.5px solid #bcbcbc;
+    text-indent: -9999px;
+  }
+}
+
+.slick-slideable {
+  width: 100%;
+}
+
+.precedes-hr {
+  margin-bottom: 10px;
+  @media (max-width: 767px) {
+    margin-bottom: 45px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+/* TODO: Get approved content and remove */
+.temporary-text {
+  color: red;
+}
+
+.callout {
+  font-size: 26px;
+  width: 95%;
+  text-align: center;
+  line-height: 35px;
+  margin: 60px auto;
+  @media (max-width: 500px) {
+    margin: 30px auto;
+  }
+  &.large {
+    font-size: 30px;
+    line-height: 40px;
+    width: 85%;
+    @media (max-width: 500px) {
+      font-size: 24px;
+    }
+  }
+  &.left {
+    text-align: left;
+    width: 100%;
+  }
+  &.min-callout-margin {
+    margin: 25px auto;
+  }
+}
