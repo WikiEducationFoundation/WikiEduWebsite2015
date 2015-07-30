@@ -7,7 +7,7 @@ if(has_post_thumbnail()) {
   $hero_class = '';
   } 
 ?>
-<div class="hero <?= $hero_class?>" style="background-image:url(<?= $featured_image; ?>);background-position: 50% 0%;">
+<div class="hero <?= $hero_class?>" style="background-image:url(<?= $featured_image; ?>)">
   <?= the_post_thumbnail(); ?>
   <div class="hero-gradient"></div>
   <div class="hero-gradient hero-gradient--white"></div>

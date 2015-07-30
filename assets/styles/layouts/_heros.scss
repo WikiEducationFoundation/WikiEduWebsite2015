@@ -3,7 +3,7 @@
    display: block;
    position: relative;
    width: 100%;
-   height: auto; 
+   height: auto;
    background-color: black;
    z-index: 1;
    max-height: 650px;
@@ -11,17 +11,27 @@
    background-position: 50% 0%;
    overflow: hidden;
    opacity: 0;
-   
+   background-position: center;
+   @media (min-width: 1776px) {
+     min-height: 880px;
+   }
+   @media (min-width: 1231px) and (max-width: 1775px) {
+     min-height: 600px;
+   }
+   @media (max-height: 476px) {
+     min-height: 240px;
+   }
+
    & > img {
       position: absolute;
       visibility: hidden;
    }
-   
+
    &.active {
       opacity: 1;
    }
 
-   
+
    &:after {
       content: '';
       width: 100%;
@@ -38,7 +48,7 @@
       left: 0;
       vertical-align: top;
       width: 100%;
-      height: auto; 
+      height: auto;
       visibility: hidden;
    }
 
@@ -57,7 +67,7 @@
       vertical-align: bottom;
       background: rgba(0,0,0,0.0) url(../images/dark-gradient.png) no-repeat center bottom;
       background-size: 100% auto;
-      
+
       &--white {
          top: 0;
          bottom: auto;
@@ -144,9 +154,22 @@
          margin: 0 auto;
       }
       h1 {
-         margin-bottom: 0; 
+         margin-bottom: 0;
          text-align: center;
          color: white;
+         line-height: 1.2;
+         @media (min-width: 1600px){
+           font-size: 88px;
+         }
+         @media (min-width: 1200px) and (max-width: 1599px){
+           font-size: 78px;
+         }
+         @media (min-width: 921px) and (max-width: 1199px){
+           font-size: 58px;
+         }
+         @media (min-width: 921px) and (max-width: 920px){
+           font-size: 45px;
+         }
       }
 
       p {
