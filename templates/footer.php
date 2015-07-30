@@ -1,9 +1,9 @@
 <?php get_template_part('templates/contact-form'); ?>
 <?php
-  function custom_field($field) {
-    global $post;
-    return get_post_meta($post->ID, $field, true);
-  }
+function custom_field($field) {
+  global $post;
+  return get_post_meta($post->ID, $field, true);
+}
   $is_not_brochure_page = !(custom_field('page_title_class') === 'brochure');
   $is_brochure_page = !$is_not_brochure_page;
 ?>
