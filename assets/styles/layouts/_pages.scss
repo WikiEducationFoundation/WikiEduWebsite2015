@@ -290,10 +290,6 @@ hr {
 
 .hero {
   background-repeat: no-repeat;
-  @media (max-width: 500px) {
-    /* override inline style */
-    background-size: 500px !important;
-  }
 }
 
 .postid-5585 {

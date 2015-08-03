@@ -21,7 +21,7 @@
     'bottom' => '75%'
   );
 
-  $css_position = isset($focal_point) ? $positions($focal_point) : '50%';
+  $css_position = isset($focal_point) ? $positions[$focal_point] : '50%';
 
 ?>
 <div class="hero <?= $hero_class; ?>" style="background-image:url(<?= $hero_image; ?>);background-position: 0 <?= $css_position ?>">
