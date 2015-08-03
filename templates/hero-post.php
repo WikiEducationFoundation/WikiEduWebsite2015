@@ -8,12 +8,11 @@
     $hero_class = '';
   }
 
-  function custom_field($field) {
-    global $post;
-    return get_post_meta($post->ID, $field, true);
+  if (get_post_meta($post->ID, 'image_focal_point', true)) {
+    $image_focal_point = get_post_meta($post->ID, 'image_focal_point', true);
+  } else {
+    $image_focal_point = 'middle';
   }
-
-  $focal_point = custom_field('image_focal_point');
 
   $positions = array(
     'top'    => '25%',
@@ -21,10 +20,11 @@
     'bottom' => '75%'
   );
 
-  $css_position = isset($focal_point) ? $positions[$focal_point] : '50%';
+  $css_position = $positions[$image_focal_point];
+
 
 ?>
-<div class="hero <?= $hero_class; ?>" style="background-image:url(<?= $hero_image; ?>);background-position: 0 <?= $css_position ?>">
+<div class="hero <?= $hero_class?>" style="background-image:url(<?= $hero_image; ?>);background-position: 0 <?= $css_position ?>">
   <div class="hero-gradient"></div>
   <div class="hero-gradient hero-gradient--white"></div>
   <div class="hero-inner">
