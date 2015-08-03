@@ -250,8 +250,8 @@ body {
     overflow-x: hidden;
   }
   .hero.active {
-    @media (max-width: 475px) {
-      height: 234px;
+    @media (max-width: 480px) {
+      height: 194px;
       h1 {
         font-size: 26px;
         line-height: 1.2;
