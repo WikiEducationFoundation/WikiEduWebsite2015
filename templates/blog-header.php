@@ -1,5 +1,5 @@
 
-<h1 class="blog-title">Recent news from Wiki Ed</h1>
+<h1 class="blog-title">Recent news from Wiki Education</h1>
 <div class="blog-header">
 
    <div class="row">
